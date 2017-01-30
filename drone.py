@@ -8,8 +8,9 @@ import sys, select, termios, tty
 logging.basicConfig(level=logging.ERROR)
 
 moveBindings = {
-        'i':1.5,
-        'm':.5,
+        'i':1.25,
+        'm':.75,
+	'l':0
             }
 
 class MotorRampExample:
@@ -63,8 +64,8 @@ class MotorRampExample:
 
         settings = termios.tcgetattr(sys.stdin)
         while(1):
-            thrust *= self._getKey(settings) 
-            self._cf.commander.send_setpoint(roll, pitch, yawrate, int(thrust))
+            thrust = int(thrust * self._getKey(settings)) # motors only accept ints, not floats 
+            self._cf.commander.send_setpoint(roll, pitch, yawrate, thrust)
             print ('>>> thrust:', thrust)
             time.sleep(0.01)
 
