@@ -7,4 +7,4 @@ scripts to precisely control crazyflie parameters
 * [crazyflie lib](https://github.com/bitcraze/crazyflie-lib-python)
 
 ## example
-connect usb to crazyflie. then, from terminal, do `python3 examples/ramp.py`
+connect usb to crazyflie. then, from terminal, do `python drone.py`
