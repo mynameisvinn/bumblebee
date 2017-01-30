@@ -34,3 +34,4 @@ if __name__=="__main__":
         now = time.strftime("%H:%M", time.localtime(time.time()))
         print now, '>>> thrust:', THRUST
         time.sleep(SLEEP)
+        
