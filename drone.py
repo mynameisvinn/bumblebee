@@ -54,7 +54,7 @@ class MotorRampExample:
         print('Disconnected from %s' % link_uri)
 
     def _ramp_motors(self):
-        thrust = 5000
+        thrust = 500
         pitch = 0
         roll = 0
         yawrate = 0

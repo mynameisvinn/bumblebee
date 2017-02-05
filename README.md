@@ -1,4 +1,4 @@
-# PROJECT BUMBLEBEE
+# bumblebee
 
 ## what is this?
 scripts to precisely control crazyflie parameters
